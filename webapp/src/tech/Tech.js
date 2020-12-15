@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import axios from "axios";
 import "./Tech.css"
 
+import Login from "../login/Login";
+
 export class Tech extends Component {
     state = {
         technologies: []
@@ -21,6 +23,7 @@ export class Tech extends Component {
             </li>
         );
         return (
+
             <ul className="technologies">
                 {technologies}
             </ul>
