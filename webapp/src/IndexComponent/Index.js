@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import axios from "axios";
 import "./css/IndexComponent.css"
 
+import {IndexNav} from "./IndexNav";
+
 export class Index extends Component {
 
 
@@ -12,7 +14,7 @@ export class Index extends Component {
         //     .then(resp => {
         //         console.log(resp.data);
         //     });
-        
+
     }
 
     render() {

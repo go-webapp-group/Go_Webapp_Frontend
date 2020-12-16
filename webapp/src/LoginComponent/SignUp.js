@@ -3,9 +3,18 @@ import axios from "axios";
 import "./css/LoginComponent.css"
 
 import {LoginNav} from "./LoginNav";
+import img from "../background.jpg";
 
 const SignUpDiv = {
-    marginTop: "90px"
+    marginTop: "90px",
+    backgroundColor: "rgba(0,0,0,0)"
+};
+
+const bgGround = {
+    width: "100%",
+    height: "100%",
+    backgroundSize: "cover",
+    backgroundImage: 'url(' + img + ')'
 };
 
 export class SignUp extends Component {
@@ -88,7 +97,7 @@ export class SignUp extends Component {
 
     render() {
         return (
-            <div>
+            <div style={bgGround}>
                 <LoginNav/>
                 <div className="auth-wrapper">
                     <div className="auth-inner" style={SignUpDiv}>
