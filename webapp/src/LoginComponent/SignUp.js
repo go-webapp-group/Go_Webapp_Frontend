@@ -60,7 +60,7 @@ export class SignUp extends Component {
         * */
         if (flag === this.state.userInfo.length) {
             if (password === confirm)
-                this.props.history.push('/main');
+                this.props.history.push(`/index/${username}`);
             else
                 console.log("Confirm Password is not the same as Password");
         } else
@@ -112,7 +112,7 @@ export class SignUp extends Component {
 
                             <button type="submit" className="btn btn-primary btn-block" onClick={(e) => {this.clickSignUp(this.state.username, this.state.password, this.state.confirm)}}>Sign Up</button>
                             <p className="forgot-password text-right">
-                                Already registered <a href={this.state.loginUrl}>login?</a>
+                                Already registered <a href="http://localhost:3000/login">login?</a>
                             </p>
                         </form>
                     </div>

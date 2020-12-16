@@ -40,7 +40,7 @@ export class Login extends Component {
         for (let i = 0; i < this.state.userInfo.length; i++) {
             if (this.state.userInfo[i].username === username) {
                 if (this.state.userInfo[i].password === password) {
-                    this.props.history.push('/main');
+                    this.props.history.push(`/index/${username}`);
                 } else {
                     console.log("Error Password");
                 }
@@ -99,7 +99,7 @@ export class Login extends Component {
                                 </div>
                             </div>
 
-                            <button type="submit" className="btn btn-primary btn-block" onClick={(e) => this.clickLogin(this.state.username, this.state.password)}>Submit</button>
+                            <button type="submit" className="btn btn-primary btn-block" onClick={(e) => this.clickLogin(this.state.username, this.state.password)}>Sign In</button>
                         </form>
                     </div>
                 </div>
