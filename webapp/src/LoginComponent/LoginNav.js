@@ -8,7 +8,7 @@ export class LoginNav extends Component {
         return (
             <nav className="navbar navbar-expand-lg navbar-light fixed-top">
                 <div className="container">
-                    <Link className="navbar-brand" to={"/login"}>store</Link>
+                    <Link className="navbar-brand" to={"/login"}>Welcome to Store!</Link>
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
                         <ul className="navbar-nav ml-auto">
                             <li className="nav-item">

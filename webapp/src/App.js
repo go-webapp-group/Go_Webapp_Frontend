@@ -10,11 +10,9 @@ import {SignUp} from "./LoginComponent/SignUp";
 export function App() {
     return (
         <Router>
-            <div className={App}>
-                <Route path="/" component={Login} exact />
-                <Route path="/login" component={Login}/>
-                <Route path="/signup" component={SignUp}/>
-            </div>
+            <Route path="/" component={Login} exact />
+            <Route path="/login" component={Login}/>
+            <Route path="/signup" component={SignUp}/>
         </Router>
     );
 }

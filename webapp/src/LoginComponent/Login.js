@@ -18,14 +18,54 @@ export class Login extends Component {
                 "username": "Cindy",
                 "password": "Cindy123"
             }
-        ]
+        ],
+
+        username: "",
+
+        password: ""
     };
 
     componentDidMount() {
-        axios.get(`${process.env.REACT_APP_API_URL}/api/technologies`)
-            .then(resp => {
-                console.log(resp.data);
-            });
+        // axios.get(`${process.env.REACT_APP_API_URL}/api/technologies`)
+        //     .then(resp => {
+        //         console.log(resp.data);
+        //     });
+    }
+
+    clickLogin(username, password) {
+        console.log(username, password);
+
+        let flag = 0;
+
+        for (let i = 0; i < this.state.userInfo.length; i++) {
+            if (this.state.userInfo[i].username === username) {
+                if (this.state.userInfo[i].password === password) {
+                    this.props.history.push('/main');
+                } else {
+                    console.log("Error Password");
+                }
+            } else
+                flag++;
+        }
+
+        if (flag === this.state.userInfo.length)
+            console.log("No Such Username");
+        else
+            console.log("Login Successfully");
+    }
+
+
+
+    formUserName(e) {
+        this.setState({
+            username: e.target.value
+        });
+    }
+
+    formPassword(e) {
+        this.setState({
+            password: e.target.value
+        });
     }
 
     render() {
@@ -44,12 +84,12 @@ export class Login extends Component {
 
                             <div className="form-group">
                                 <label>Username</label>
-                                <input type="email" className="form-control" placeholder="Enter username" />
+                                <input type="text" className="form-control" placeholder="Enter username" onChange={(e) => this.formUserName(e)} value={this.state.username}/>
                             </div>
 
                             <div className="form-group">
                                 <label>Password</label>
-                                <input type="password" className="form-control" placeholder="Enter password" />
+                                <input type="password" className="form-control" placeholder="Enter password" onChange={(e) => this.formPassword(e)} value={this.state.password}/>
                             </div>
 
                             <div className="form-group">
@@ -59,10 +99,7 @@ export class Login extends Component {
                                 </div>
                             </div>
 
-                            <button type="submit" className="btn btn-primary btn-block">Submit</button>
-                            <p className="forgot-password text-right">
-                                Forgot <a href="#">password?</a>
-                            </p>
+                            <button type="submit" className="btn btn-primary btn-block" onClick={(e) => this.clickLogin(this.state.username, this.state.password)}>Submit</button>
                         </form>
                     </div>
                 </div>
