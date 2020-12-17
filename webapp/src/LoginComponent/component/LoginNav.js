@@ -1,6 +1,7 @@
 import React, {Component} from "react";
-import "./css/LoginComponent.css"
+import "../css/LoginComponent.css"
 import { Link } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const transparent = {
     backgroundColor: "rgba(0,0,0,0)"

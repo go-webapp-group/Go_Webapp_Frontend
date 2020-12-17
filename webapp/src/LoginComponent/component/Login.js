@@ -1,8 +1,9 @@
 import React, {Component} from "react";
 import axios from "axios";
-import "./css/LoginComponent.css"
+import "../css/LoginComponent.css"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-import img from "../background.jpg"
+import img from "../images/background.jpg"
 
 import {LoginNav} from "./LoginNav";
 
