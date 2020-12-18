@@ -31,16 +31,26 @@ export class Login extends Component {
             }
         ],
 
+        user: {},
+
         username: "",
 
         password: ""
     };
 
     componentDidMount() {
-        // axios.get(`${process.env.REACT_APP_API_URL}/api/technologies`)
-        //     .then(resp => {
-        //         console.log(resp.data);
-        //     });
+        axios.get(`${process.env.REACT_APP_API_URL}/api/technologies`)
+            .then(resp => {
+                console.log(resp.data);
+            });
+        
+        axios.get(`${process.env.REACT_APP_API_URL}/api/users`)
+            .then(resp => {
+                console.log(resp.data);
+                this.setState({
+                   userInfo: resp.data
+                });
+            });
     }
 
     clickLogin(username, password) {
@@ -63,6 +73,16 @@ export class Login extends Component {
             console.log("No Such Username");
         else
             console.log("Login Successfully");
+
+        axios.get(`${process.env.REACT_APP_API_URL}/api/users/${username}`)
+            .then(resp => {
+                console.log(resp.data);
+                this.setState({
+                    user: resp.data[0]
+                });
+                console.log(this.state.user);
+            });
+
     }
 
 

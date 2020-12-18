@@ -40,9 +40,12 @@ export class SignUp extends Component {
     };
 
     componentDidMount() {
-        axios.get(`${process.env.REACT_APP_API_URL}/api/technologies`)
+        axios.get(`${process.env.REACT_APP_API_URL}/api/users`)
             .then(resp => {
                 console.log(resp.data);
+                this.setState({
+                    userInfo: resp.data
+                });
             });
 
         this.setState({
@@ -69,12 +72,23 @@ export class SignUp extends Component {
         * 当用户名未被使用过时，确认两次输入密码是否一致
         * */
         if (flag === this.state.userInfo.length) {
-            if (password === confirm)
-                this.props.history.push(`/index/${username}`);
-            else
+            if (password === confirm) {
+                axios.post(`${process.env.REACT_APP_API_URL}/api/user/register`, {
+                    username: username,
+                    password: password,
+                    balance: 0
+                }).then(resp => {
+                    console.log(resp.data);
+                    this.props.history.push(`/index/${username}`);
+                }, error => {
+                    console.log("error: ", error.message);
+                    console.log("Unable to sign up");
+                });
+            } else
                 console.log("Confirm Password is not the same as Password");
         } else
             console.log("Username Exists");
+
 
     }
 
