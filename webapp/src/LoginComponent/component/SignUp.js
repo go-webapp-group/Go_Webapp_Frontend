@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import axios from "axios";
+import qs from "Qs"
 import "../css/LoginComponent.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -73,11 +74,10 @@ export class SignUp extends Component {
         * */
         if (flag === this.state.userInfo.length) {
             if (password === confirm) {
-                axios.post(`${process.env.REACT_APP_API_URL}/api/user/register`, {
-                    username: username,
-                    password: password,
-                    balance: 0
-                }).then(resp => {
+                axios.post(`${process.env.REACT_APP_API_URL}/api/user/register`, qs.stringify({
+                    "username": username,
+                    "password": password
+                })).then(resp => {
                     console.log(resp.data);
                     this.props.history.push(`/index/${username}`);
                 }, error => {
