@@ -27,10 +27,18 @@ cnpm start
 ```
 
 实现UI界面如下：
-|登陆界面|商品展示界面|
-|:-:|:-:|
-|![login](./pic/login.png)|![shop](./pic/shop.png)|
+|登陆界面|
+|:-:|
+|![login](./pic/login.png)|
 
-|购物车初始页面|添加商品至购物车|
-|:-:|:-:|
-|![cart](./pic/cart.png)|![carts](./pic/carts.png)|
+|商品页面|
+|:-:|
+|![shop](./pic/shop.png)|
+
+|购物车初始页面|
+|:-:|
+|![cart](./pic/cart.png)|
+
+|添加商品至购物车|
+|:-:|
+|![carts](./pic/carts.png)|
