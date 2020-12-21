@@ -74,7 +74,7 @@ export class SignUp extends Component {
         * */
         if (flag === this.state.userInfo.length) {
             if (password === confirm) {
-                axios.post(`${process.env.REACT_APP_API_URL}/api/user/register`, qs.stringify({
+                axios.post(`${process.env.REACT_APP_API_URL}/users/register`, qs.stringify({
                     "username": username,
                     "password": password
                 })).then(resp => {

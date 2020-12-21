@@ -1,29 +1,29 @@
 .my-container {
 }
 .my-count {
-  font-size: 20px;
-  -webkit-user-select: none; /* Chrome/Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10+ */
+    font-size: 20px;
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
 
-  /* Not implemented yet */
-  -o-user-select: none;
-  user-select: none;
+    /* Not implemented yet */
+    -o-user-select: none;
+    user-select: none;
 }
 .my-count:hover {
-  font-weight: bolder;
-  cursor: pointer;
+    font-weight: bolder;
+    cursor: pointer;
 }
 
 .my-count-disabled {
-  font-size: 20px;
-  -webkit-user-select: none; /* Chrome/Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10+ */
+    font-size: 20px;
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
 
-  /* Not implemented yet */
-  -o-user-select: none;
-  user-select: none;
-  pointer-events: none;
-  opacity: 0.5;
+    /* Not implemented yet */
+    -o-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    opacity: 0.5;
 }

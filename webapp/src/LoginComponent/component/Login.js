@@ -39,12 +39,8 @@ export class Login extends Component {
     };
 
     componentDidMount() {
-        axios.get(`${process.env.REACT_APP_API_URL}/api/technologies`)
-            .then(resp => {
-                console.log(resp.data);
-            });
         
-        axios.get(`${process.env.REACT_APP_API_URL}/api/users`)
+        axios.get(`${process.env.REACT_APP_API_URL}/users`)
             .then(resp => {
                 console.log(resp.data);
                 this.setState({
