@@ -5,7 +5,9 @@
 
 ### 0. 实验环境
 - 富客户端js框架：`React`
-- 操作系统：`Windows 10`
+- 操作系统：`Windows 10`  
+
+前端源码连接：[webapp传送门](https://github.com/wuhy68/Go_Webapp_Frontend/tree/master/webapp)
 
 ### 1. 安装指南
 在终端执行如下命令克隆本项目：
@@ -25,6 +27,10 @@ npm install -g cnpm
 cnpm install
 cnpm start
 ```
+
+### 2. 测试demo
+- 测试账号：`Howell`
+- 测试密码：`Howell123`
 
 实现UI界面如下：
 |登陆界面|
