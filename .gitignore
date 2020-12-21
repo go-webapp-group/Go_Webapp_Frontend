@@ -1,4 +1,5 @@
 .idea
+.DS_Store
 
 webapp/node_modules/*
 webapp/package-lock.json

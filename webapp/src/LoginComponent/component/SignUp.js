@@ -9,7 +9,7 @@ import img from "../images/background.jpg";
 
 const SignUpDiv = {
     marginTop: "90px",
-    backgroundColor: "rgba(0,0,0,0)"
+    backgroundColor: "rgba(5,5,5,5)"
 };
 
 const bgGround = {
